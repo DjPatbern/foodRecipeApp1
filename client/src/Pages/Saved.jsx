@@ -23,7 +23,7 @@ const Saved = () => {
       }
     };
     fetchSavedRecipes();
-  }, [userID]);
+  }, []);
 
 
   // const username = useGetUsername();
