@@ -8,7 +8,7 @@ const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [savedRecipes, setSavedRecipes] = useState([]);
   const userID = useGetId();
-  const [cookies, ] = useCookies(["access_token"])
+  const [cookies, _] = useCookies(["access_token"])
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -34,7 +34,7 @@ const Home = () => {
     };
     fetchRecipes();
     fetchSavedRecipes();
-  }, [userID]);
+  }, []);
 
   const saveRecipe = async (recipeID) => {
     try {

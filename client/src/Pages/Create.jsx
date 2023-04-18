@@ -9,7 +9,7 @@ const Create = () => {
   const UserId = useGetId()
   const username = useGetUsername()
   const navigate = useNavigate()
-  const [cookies, ] = useCookies(["access_token"])
+  const [cookies, _] = useCookies(["access_token"])
 const [recipe, setRecipe] = useState({
   name: "",
   ingredients: [],
