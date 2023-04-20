@@ -40,7 +40,7 @@ const handleIngredientChange = (e, idx) => {
 const onSubmit = async (e) => {
 e.preventDefault()
 try {
- await axios.post("http://localhost:3001/recipes", recipe, {
+ await axios.post("https://food-recipe-app-o6zg.onrender.com/recipes", recipe, {
   headers: {
     authorization: cookies.access_token
   }

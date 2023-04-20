@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes");
+        const response = await axios.get("https://food-recipe-app-o6zg.onrender.com/recipes");
         setRecipes(response.data);
       } catch (error) {
         console.error(error);
@@ -23,7 +23,7 @@ const Home = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedRecipes/ids/${userID}`,
+          `https://food-recipe-app-o6zg.onrender.com/recipes/savedRecipes/ids/${userID}`,
           { userID }
         );
         setSavedRecipes(response.data.savedRecipes);
@@ -38,7 +38,7 @@ const Home = () => {
 
   const saveRecipe = async (recipeID) => {
     try {
-      const response = await axios.put("http://localhost:3001/recipes", {
+      const response = await axios.put("https://food-recipe-app-o6zg.onrender.com/recipes", {
         recipeID,
         userID,
       }, {headers: {
